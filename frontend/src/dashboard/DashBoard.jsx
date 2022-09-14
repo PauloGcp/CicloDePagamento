@@ -5,7 +5,7 @@ import { bindActionCreators } from "redux";
 import ContentHeader from "../common/template/ContentHeader";
 import Content from "../common/template/Content";
 import ValueBox from "../common/widget/ValueBox";
-import Row from "../common/layout/Row";
+import Row from "../common/layout-operators/Row";
 import { getSumary } from "./dashBoardActions";
 
 class Dashboard extends Component{

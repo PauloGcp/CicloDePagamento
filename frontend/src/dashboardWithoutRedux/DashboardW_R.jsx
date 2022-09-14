@@ -4,7 +4,7 @@ import axios from "axios";
 import ContentHeader from "../common/template/ContentHeader";
 import Content from "../common/template/Content";
 import ValueBox from "../common/widget/ValueBox";
-import Row from "../common/layout/Row";
+import Row from "../common/layout-operators/Row";
 
 const BASE_URL = 'http://localhost:3003/api'
 

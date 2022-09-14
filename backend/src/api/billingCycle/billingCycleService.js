@@ -35,7 +35,7 @@ modelBillingCycle.route('summary', (req, res, next) => {
 })
 
 //*problema de versionamento do node-restful*
-modelBillingCycle.route('get', (req, res, next) => {
+/* modelBillingCycle.route('get', (req, res, next) => {
     modelBillingCycle.find({}, (err, docs) => {
         if(!err) {
             res.json(docs)
@@ -43,6 +43,6 @@ modelBillingCycle.route('get', (req, res, next) => {
             res.status(500).json({errors: [error]})
         }
     }).skip(req.query.skip).limit(req.query.limit)
-})
+}) */
 
 module.exports = modelBillingCycle
