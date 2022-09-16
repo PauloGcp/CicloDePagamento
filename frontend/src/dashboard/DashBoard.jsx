@@ -7,6 +7,8 @@ import Content from "../common/template/Content";
 import ValueBox from "../common/widget/ValueBox";
 import Row from "../common/layout-operators/Row";
 import { getSumary } from "./dashBoardActions";
+import TabContent from "../common/tab/TabsContent";
+import List from "../cicloDePagamento/CicloDePagamentoList";
 
 class Dashboard extends Component{
 
@@ -25,6 +27,10 @@ class Dashboard extends Component{
                         <ValueBox cols={'12 4'} color={'red'} icon={'credit-card'} value={`R$ ${debt}`} text={'Total de Débitos'}/>
                         <ValueBox color={'blue'} icon={'money'} value={`R$ ${credit - debt}`} text={'Valor Consolidado'}/>
                     </Row>
+                    {/* refatora isso aq po 
+                    <TabContent id='tabList'>
+                                <List></List>
+                    </TabContent> */}
                 </Content>
             </div>
         )

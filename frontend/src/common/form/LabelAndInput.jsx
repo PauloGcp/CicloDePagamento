@@ -1,3 +1,5 @@
+//input feito para o ciclo de pagamento (redux-form: "Field")
+
 import React from "react";
 import Grid from "../layout-operators/Grid";
 

@@ -9,15 +9,13 @@ import TabsHeader from "../common/tab/TabsHeader";
 import TabsContent from "../common/tab/TabsContent";
 import TabHeader from "../common/tab/TabHeader";
 import TabContent from './../common/tab/TabContent';
-import { selectTab, showTabs } from "../common/tab/tabActions";
-import { create, update, deletee } from "./cicloDePagamentoActions";
+import { create, update, deletee, init } from "./cicloDePagamentoActions";
 import List from "./CicloDePagamentoList";
-import Form from './cicloDePagamentoForm'
+import Form from './CicloDePagamentoForm'
 
 class CicloDePagamento extends Component{
     componentWillMount(){
-        this.props.selectTab('tabList')
-        this.props.showTabs('tabList', 'tabCreate')
+        this.props.init()
     }
 
     render(){
@@ -54,6 +52,6 @@ class CicloDePagamento extends Component{
     }
 }
 
-const mapDispatchToProps = dispatch =>( bindActionCreators({selectTab, showTabs, create, update, deletee}, dispatch))
+const mapDispatchToProps = dispatch =>( bindActionCreators({init, create, update, deletee}, dispatch))
 
 export default connect(null, mapDispatchToProps)(CicloDePagamento)
