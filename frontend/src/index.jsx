@@ -8,9 +8,10 @@ import multi from 'redux-multi';
 //permite que a action creator, ao inves de retornar diretamente uma action com type e payload,
 //retorne uma função que disparará a action
 import thunk from 'redux-thunk';
-import App from "./main/App";
 import reducers from './main/reducers'
 import promise from "redux-promise";
+
+import Routes from "./main/Routes";
 
 //configuração do devtools do redux
 const devTools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
@@ -18,6 +19,6 @@ const store = applyMiddleware(multi, thunk, promise)(createStore)(reducers, devT
 
 ReactDOM.render(
     <Provider store={store}>
-        <App/>
+        <Routes/>
     </Provider>
     , document.getElementById('app'))

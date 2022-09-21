@@ -21,8 +21,8 @@ class CicloDePagamentoForm extends Component {
     calculateSumary(){
         return {
             //metodo reduce aplica uma função a um array, retornando um unico valor 
-            sumOfCredits: this.props.credits.map(c => c.value || 0).reduce((t, v) => t + v),
-            sumOfDebits: this.props.debits.map(d => d.value || 0).reduce((t, v) => t + v)
+            sumOfCredits: this.props.credits.map(c => +c.value || 0).reduce((t, v) => t + v),
+            sumOfDebits: this.props.debits.map(d => +d.value || 0).reduce((t, v) => t + v)
         }
     }
 
